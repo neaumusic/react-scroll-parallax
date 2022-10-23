@@ -19,7 +19,7 @@ const TealRow = styled.hr`
   z-index: 99999;
 `;
 const BlankPage = styled.div`
-  height: 100vh;
+  height: 150vh;
   width: 100vw;
 `;
 const vhMarkers = new Array(9).fill(0).map((v, i) => (i + 1) * 10);

@@ -40,7 +40,7 @@ const Wrapper = (props) => (
 export const WithTranslateY = () => (
   <ParallaxProvider>
     {/* <Log /> */}
-    <div style={{ height: '300vh' }} className="vertical">
+    <div style={{ height: '400vh' }} className="vertical">
       <BreakPoints />
       <ParallaxBanner
         className={styles.bannerBg}
@@ -51,7 +51,7 @@ export const WithTranslateY = () => (
           background: 'transparent',
         }}
       >
-        <ParallaxBannerLayer translateY={[0, 0]}>
+        <ParallaxBannerLayer shouldAlwaysCompleteAnimation translateY={[-10, 0]}>
           <img
             style={{ width: '100vw', height: '100vh' }}
             src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/105988/banner.jpg"
