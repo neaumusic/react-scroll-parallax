@@ -2,6 +2,7 @@ import React from 'react';
 import { ParallaxBanner, ParallaxProvider } from '../../src';
 import { ParallaxBannerLayer } from '../../src/components/ParallaxBanner/components/ParallaxBannerLayer';
 import styles from './ParallaxBanner.module.scss';
+import { BreakPoints } from './BreakPoints';
 
 const Log = () => {
   const scrollY = window.pageYOffset;
@@ -32,6 +33,32 @@ const Wrapper = (props) => (
     {/* <Log /> */}
     <div style={{ height: '300vh' }} className="vertical">
       <div className={styles.bannerContainer}>{props.children}</div>
+    </div>
+  </ParallaxProvider>
+);
+
+export const WithTranslateY = () => (
+  <ParallaxProvider>
+    {/* <Log /> */}
+    <div style={{ height: '300vh' }} className="vertical">
+      <BreakPoints />
+      <ParallaxBanner
+        className={styles.bannerBg}
+        style={{
+          height: '100vh',
+          width: '100vw',
+          overflow: 'visible',
+          background: 'transparent',
+        }}
+      >
+        <ParallaxBannerLayer translateY={[0, 0]}>
+          <img
+            style={{ width: '100vw', height: '100vh' }}
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/105988/banner.jpg"
+          />
+        </ParallaxBannerLayer>
+      </ParallaxBanner>
+      <BreakPoints />
     </div>
   </ParallaxProvider>
 );
